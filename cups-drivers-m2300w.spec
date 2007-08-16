@@ -3,9 +3,9 @@
 Summary:	Konica Minolta magicolor 2300W and 2400W Printer Driver
 Name:		cups-drivers-%{rname}
 Version:	0.51
-Release:	%mkrel 1
+Release:	%mkrel 2
 Copyright:	GPL
-Group:		System/Configuration/Printing
+Group:		System/Printing
 URL:		http://sourceforge.net/projects/m2300w/
 Source0:	http://downloads.sourceforge.net/m2300w/%{rname}-%{version}.tar.gz
 Patch0:		m2300w-0.3-noppdbuild.patch
@@ -74,5 +74,5 @@ rm -rf %{buildroot}
 %attr(0644,root,root) %{_datadir}/foomatic/db/source/printer/*.xml
 %attr(0644,root,root) %{_datadir}/foomatic/db/source/driver/*.xml
 %attr(0755,root,root) %dir %{_datadir}/cups/model/%{rname}
-%attr(0644,root,root) %{_datadir}/cups/model/%{rname}/magicolor_2300W-%{rname}.ppd
-%attr(0644,root,root) %{_datadir}/cups/model/%{rname}/magicolor_2400W-m2400w.ppd
+%attr(0644,root,root) %{_datadir}/cups/model/%{rname}/magicolor_2300W-%{rname}.ppd*
+%attr(0644,root,root) %{_datadir}/cups/model/%{rname}/magicolor_2400W-m2400w.ppd*
