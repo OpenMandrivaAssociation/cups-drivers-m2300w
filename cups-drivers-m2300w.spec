@@ -16,7 +16,6 @@ Conflicts:	cups-drivers = 2007
 Conflicts:	printer-utils = 2007
 Conflicts:	printer-filters = 2007
 Conflicts:	foomatic-db < 1:3.0.2-1.20070820.1mdv2008.0
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 %description
 The m2300w driver is a Linux printer driver for the Konica Minolta magicolor
