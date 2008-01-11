@@ -3,7 +3,7 @@
 Summary:	Konica Minolta magicolor 2300W and 2400W Printer Driver
 Name:		cups-drivers-%{rname}
 Version:	0.51
-Release:	%mkrel 4
+Release:	%mkrel 5
 License:	GPL
 Group:		System/Printing
 URL:		http://sourceforge.net/projects/m2300w/
