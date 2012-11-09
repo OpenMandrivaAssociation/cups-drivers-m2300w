@@ -1,0 +1,73 @@
+--- configure.in.orig	2005-08-05 02:19:29.000000000 +0200
++++ configure.in	2005-08-05 02:24:33.000000000 +0200
+@@ -59,44 +59,44 @@
+ AC_PATH_DIRS(CUPS_PPDS,cups/model,/usr/share/cups/model,$DATASEARCHPATH)
+ 
+ dnl --------------------------------------------------------------------------
+-dnl check for GHOSTSCRIPT
++dnl do not check for GHOSTSCRIPT
+ dnl --------------------------------------------------------------------------
+ 
+-AC_PATH_PROG(GS,gs,,[/usr/bin:/bin:/usr/local/bin:/opt/bin:$PATH])
+-if test -z "$GS"; then
+-    echo "This driver requires ghostscript."
+-    echo "Please install ghostscript first."
+-    exit 1
+-fi
+-
+-echo "testing $GS..."
+-$GS -sDEVICE=nullpage -dNOPAUSE -dBATCH -c "(Version=) print revision ="
+-if test $? -ne 0 ; then
+-    echo "$GS does not work"
+-    exit 1
+-fi
+-echo "ok"
++dnl AC_PATH_PROG(GS,gs,,[/usr/bin:/bin:/usr/local/bin:/opt/bin:$PATH])
++dnl if test -z "$GS"; then
++dnl     echo "This driver requires ghostscript."
++dnl     echo "Please install ghostscript first."
++dnl     exit 1
++dnl fi
++
++dnl echo "testing $GS..."
++dnl $GS -sDEVICE=nullpage -dNOPAUSE -dBATCH -c "(Version=) print revision ="
++dnl if test $? -ne 0 ; then
++dnl     echo "$GS does not work"
++dnl     exit 1
++dnl fi
++dnl echo "ok"
+ 
+ dnl --------------------------------------------------------------------------
+ dnl check for FOOMATIC
+ dnl --------------------------------------------------------------------------
+ 
+-AC_PATH_PROG(FOOMATIC_RIP,foomatic-rip,,[/usr/bin:/bin:/usr/local/bin:/opt/bin:$PATH])
+-if test -z "$FOOMATIC_RIP"; then
+-    echo "ERROR: This driver requires foomatic-rip."
+-    echo "Please install the 'foomatic-filters' package first."
+-    echo "See http://www.linuxprinting.org/foomatic.html"
+-    echo "(Some distributions, e.g. SuSE, deliver foomatic-rip with CUPS)"
+-    exit 1
+-fi
++dnl AC_PATH_PROG(FOOMATIC_RIP,foomatic-rip,,[/usr/bin:/bin:/usr/local/bin:/opt/bin:$PATH])
++dnl if test -z "$FOOMATIC_RIP"; then
++dnl     echo "ERROR: This driver requires foomatic-rip."
++dnl     echo "Please install the 'foomatic-filters' package first."
++dnl     echo "See http://www.linuxprinting.org/foomatic.html"
++dnl     echo "(Some distributions, e.g. SuSE, deliver foomatic-rip with CUPS)"
++dnl     exit 1
++dnl fi
+ 
+-AC_PATH_PROG(FOOMATIC_PPDFILE,foomatic-ppdfile,,[/usr/bin:/bin:/usr/local/bin:/opt/bin:$PATH])
++dnl AC_PATH_PROG(FOOMATIC_PPDFILE,foomatic-ppdfile,,[/usr/bin:/bin:/usr/local/bin:/opt/bin:$PATH])
+ 
+-AC_PATH_DIRS(FOOMATIC_DB,foomatic/db,/usr/share/foomatic/db,$DATASEARCHPATH)
++dnl AC_PATH_DIRS(FOOMATIC_DB,foomatic/db,/usr/share/foomatic/db,$DATASEARCHPATH)
+ 
+ dnl --------------------------------------------------------------------------
+ dnl create output files
+ dnl --------------------------------------------------------------------------
+ 
+-AC_OUTPUT(Makefile m2300w.spec src/Makefile src/m2300w-wrapper ppd/Makefile psfiles/Makefile foomatic/Makefile)
++AC_OUTPUT(Makefile m2300w.spec src/Makefile src/m2300w-wrapper psfiles/Makefile)
+ 

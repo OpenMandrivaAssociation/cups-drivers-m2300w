@@ -1,0 +1,23 @@
+--- src/Makefile.in	2005-10-06 21:55:04.000000000 +0200
++++ src/Makefile.in.oden	2008-12-23 21:13:04.000000000 +0100
+@@ -20,6 +20,7 @@
+ 
+ CC	= @CC@
+ CFLAGS	= @CFLAGS@
++LDFLAGS	= @LDFLAGS@
+ LIBS	= @LIBS@
+ INSTALL	= @INSTALL@
+ @SET_MAKE@
+@@ -36,10 +37,10 @@
+ all: m2300w m2400w
+ 
+ m2300w: m2300w.c
+-	$(CC) $(CFLAGS) -o m2300w m2300w.c $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o m2300w m2300w.c $(LIBS)
+ 
+ m2400w: m2400w.c
+-	$(CC) $(CFLAGS) -o m2400w m2400w.c $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o m2400w m2400w.c $(LIBS)
+ 
+ install: all $(PROGS)
+ 	chmod 755 m2300w-wrapper
