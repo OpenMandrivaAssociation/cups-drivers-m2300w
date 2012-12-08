@@ -3,7 +3,7 @@
 Summary:	Konica Minolta magicolor 2300W and 2400W Printer Driver
 Name:		cups-drivers-%{rname}
 Version:	0.51
-Release:	%mkrel 11
+Release:	%mkrel 13
 License:	GPL
 Group:		System/Printing
 URL:		http://sourceforge.net/projects/m2300w/
@@ -79,3 +79,59 @@ rm -rf %{buildroot}
 %attr(0755,root,root) %dir %{_datadir}/cups/model/%{rname}
 %attr(0644,root,root) %{_datadir}/cups/model/%{rname}/magicolor_2300W-%{rname}.ppd*
 %attr(0644,root,root) %{_datadir}/cups/model/%{rname}/magicolor_2400W-m2400w.ppd*
+
+
+%changelog
+* Tue May 03 2011 Oden Eriksson <oeriksson@mandriva.com> 0.51-11mdv2011.0
++ Revision: 663440
+- mass rebuild
+
+* Tue Nov 30 2010 Oden Eriksson <oeriksson@mandriva.com> 0.51-10mdv2011.0
++ Revision: 603872
+- rebuild
+
+* Sun Mar 14 2010 Oden Eriksson <oeriksson@mandriva.com> 0.51-9mdv2010.1
++ Revision: 518844
+- rebuild
+
+* Sun Aug 09 2009 Oden Eriksson <oeriksson@mandriva.com> 0.51-8mdv2010.0
++ Revision: 413288
+- rebuild
+
+* Tue Dec 23 2008 Oden Eriksson <oeriksson@mandriva.com> 0.51-7mdv2009.1
++ Revision: 318072
+- rediffed one fuzzy patch
+- use %%ldflags
+
+* Mon Jun 16 2008 Thierry Vignaud <tv@mandriva.org> 0.51-6mdv2009.0
++ Revision: 220542
+- rebuild
+
+* Fri Jan 11 2008 Thierry Vignaud <tv@mandriva.org> 0.51-5mdv2008.1
++ Revision: 149150
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Thu Aug 30 2007 Marcelo Ricardo Leitner <mrl@mandriva.com> 0.51-4mdv2008.0
++ Revision: 76061
+- Added conflicts to foomatic-db < 1:3.0.2-1.20070820.1mdv2008.0
+
+* Thu Aug 30 2007 Oden Eriksson <oeriksson@mandriva.com> 0.51-3mdv2008.0
++ Revision: 75329
+- fix deps (pixel)
+
+* Thu Aug 16 2007 Oden Eriksson <oeriksson@mandriva.com> 0.51-2mdv2008.0
++ Revision: 64150
+- use the new System/Printing RPM GROUP
+
+* Mon Aug 13 2007 Oden Eriksson <oeriksson@mandriva.com> 0.51-1mdv2008.0
++ Revision: 62510
+- Import cups-drivers-m2300w
+
+
+
+* Mon Aug 13 2007 Oden Eriksson <oeriksson@mandriva.com> 0.51-1mdv2008.0
+- initial Mandriva package
