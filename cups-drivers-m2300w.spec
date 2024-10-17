@@ -6,7 +6,7 @@ Version:	0.51
 Release:	25
 License:	GPLv2
 Group:		System/Printing
-Url:		http://sourceforge.net/projects/m2300w/
+Url:		https://sourceforge.net/projects/m2300w/
 Source0:	http://downloads.sourceforge.net/m2300w/%{rname}-%{version}.tar.gz
 Patch0:		m2300w-0.3-noppdbuild.patch
 Patch1:		m2300w-0.2-ppc-build-fix.patch
